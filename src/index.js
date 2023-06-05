@@ -27,22 +27,22 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 // pages for this kit
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
-import LoginPage from "views/examples/LoginPage.js";
+import SejarahPage from "views/ProfilDesa/SejarahPage";
 import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+import SistemPage from "views/ProfilDesa/SistemPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/landing-page" element={<LandingPage />} />
+      <Route path="/desapandean" element={<LandingPage />} />
       <Route path="/index" element={<Index />} />
       <Route path="/nucleo-icons" element={<NucleoIcons />} />
-      {/* <Route path="/profile-page" element={<ProfilePage />} /> */}
-      <Route path="/login-page" element={<LoginPage />} />
+      <Route path="/Sejarah-page" element={<SejarahPage />} />
+      <Route path="/Sistem-page" element={<SistemPage />} />
 
-      <Route path="*" element={<Navigate to="/landing-page" replace />} />
+      <Route path="*" element={<Navigate to="/desapandean" replace />} />
     </Routes>
   </BrowserRouter>
 );

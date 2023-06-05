@@ -81,7 +81,7 @@ function Navbars() {
                             href="#pablo"
                             onClick={(e) => e.preventDefault()}
                           >
-                            Action
+                            Action2
                           </DropdownItem>
                           <DropdownItem
                             href="#pablo"

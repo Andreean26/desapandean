@@ -1,20 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
-  Collapse,
+ 
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
   NavbarBrand,
   Navbar,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   UncontrolledTooltip,
 } from "reactstrap";
+
+import julie from "assets/img/julie.jpg";
 
 function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -49,21 +48,10 @@ function ExamplesNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg">
+      <Navbar className={"fixed-top " + navbarColor} style={{ backgroundColor: 'rgb(170, 203, 115)' }}  expand="lg">
         <Container>
           <UncontrolledDropdown className="button-dropdown">
-            <DropdownToggle
-              caret
-              data-toggle="dropdown"
-              href="#pablo"
-              id="navbarDropdown"
-              tag="a"
-              onClick={(e) => e.preventDefault()}
-            >
-              <span className="button-bar"></span>
-              <span className="button-bar"></span>
-              <span className="button-bar"></span>
-            </DropdownToggle>
+            <img src={julie} alt="logodesa"></img>
             <DropdownMenu aria-labelledby="navbarDropdown">
               <DropdownItem header tag="a">
                 Dropdown header
@@ -89,14 +77,14 @@ function ExamplesNavbar() {
           </UncontrolledDropdown>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/index?ref=nukr-examples-navbar"
-              target="_blank"
+              href="/LandingPage"
               id="navbar-brand"
+              style={{ color: 'white', fontSize: '20px', fontWeight: 'bold' }}
             >
-              Now Ui Kit
+              Desa pandean
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
+              Tekan untuk ke halaman utama
             </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
@@ -112,63 +100,193 @@ function ExamplesNavbar() {
               <span className="navbar-toggler-bar bottom-bar"></span>
             </button>
           </div>
-          <Collapse
-            className="justify-content-end"
-            isOpen={collapseOpen}
-            navbar
-          >
-            <Nav navbar>
-              <NavItem>
-                <NavLink to="/index" tag={Link}>
-                  Back to Kit
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/creativetimofficial/now-ui-kit-react/issues?ref=creativetim">
-                  Have an issue?
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
-                  target="_blank"
-                  id="facebook-tooltip"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                  <p className="d-lg-none d-xl-none">Facebook</p>
-                </NavLink>
-                <UncontrolledTooltip target="#facebook-tooltip">
-                  Like us on Facebook
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                  target="_blank"
-                  id="instagram-tooltip"
-                >
-                  <i className="fab fa-instagram"></i>
-                  <p className="d-lg-none d-xl-none">Instagram</p>
-                </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
-                </UncontrolledTooltip>
-              </NavItem>
-            </Nav>
-          </Collapse>
+
+          {/* dropdown1 */}
+          <UncontrolledDropdown>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              color="secondary"
+              data-toggle="dropdown"
+              href="#pablo"
+              id="dropdownMenuLink"
+              onClick={(e) => e.preventDefault()}
+              role="button"
+              style={{ backgroundColor: "transparent", color: "white", fontWeight: "bold", fontSize: "15px" }}
+            >
+              PROFIL DESA
+            </DropdownToggle>
+            <DropdownMenu aria-labelledby="dropdownMenuLink">
+              <DropdownItem href="/Sejarah-page" >
+                Sejarah desa
+              </DropdownItem>
+              <DropdownItem href="/Sistem-page">
+                Sistem pemerintahan
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Visi dan misi
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Struktur organisasi
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Kondisi umum desa
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Proyek desa
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Potensi desa
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+
+          {/* dropdown 2 */}
+          <UncontrolledDropdown>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              color="secondary"
+              data-toggle="dropdown"
+              href="#pablo"
+              id="dropdownMenuLink"
+              onClick={(e) => e.preventDefault()}
+              role="button"
+              style={{ backgroundColor: "transparent", color: "white", fontWeight: "bold", fontSize: "15px" }}
+            >
+              ANGGARA DESA
+            </DropdownToggle>
+            <DropdownMenu aria-labelledby="dropdownMenuLink">
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Another action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Something else here
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+
+          {/* dropdown3 */}
+          <UncontrolledDropdown>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              color="secondary"
+              data-toggle="dropdown"
+              href="#pablo"
+              id="dropdownMenuLink"
+              onClick={(e) => e.preventDefault()}
+              role="button"
+              style={{ backgroundColor: "transparent", color: "white", fontWeight: "bold", fontSize: "15px" }}
+            >
+              DATA DESA
+            </DropdownToggle>
+            <DropdownMenu aria-labelledby="dropdownMenuLink">
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Another action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Something else here
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+
+          {/* dropdown4 */}
+          <UncontrolledDropdown>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              color="secondary"
+              data-toggle="dropdown"
+              href="#pablo"
+              id="dropdownMenuLink"
+              onClick={(e) => e.preventDefault()}
+              role="button"
+              style={{ backgroundColor: "transparent", color: "white", fontWeight: "bold", fontSize: "15px" }}
+            >
+              PELAYANAN
+            </DropdownToggle>
+            <DropdownMenu aria-labelledby="dropdownMenuLink">
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Another action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Something else here
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          
+          {/* dropdown5 */}
+          <UncontrolledDropdown>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              color="secondary"
+              data-toggle="dropdown"
+              href="#pablo"
+              id="dropdownMenuLink"
+              onClick={(e) => e.preventDefault()}
+              role="button"
+              style={{ backgroundColor: "transparent", color: "white", fontWeight: "bold", fontSize: "15px" }}
+            >
+              REGULASI
+            </DropdownToggle>
+            <DropdownMenu aria-labelledby="dropdownMenuLink">
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Another action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Something else here
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+
+          {/* dropdown6 */}
+          <UncontrolledDropdown>
+            <DropdownToggle
+              aria-expanded={false}
+              aria-haspopup={true}
+              caret
+              color="secondary"
+              data-toggle="dropdown"
+              href="#pablo"
+              id="dropdownMenuLink"
+              onClick={(e) => e.preventDefault()}
+              role="button"
+              style={{ backgroundColor: "transparent", color: "white", fontWeight: "bold", fontSize: "15px" }}
+            >
+              BUMDES
+            </DropdownToggle>
+            <DropdownMenu aria-labelledby="dropdownMenuLink">
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Another action
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Something else here
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          
         </Container>
       </Navbar>
     </>
