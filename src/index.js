@@ -27,9 +27,23 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 // pages for this kit
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
-import SejarahPage from "views/ProfilDesa/SejarahPage";
 import LandingPage from "views/examples/LandingPage.js";
-import SistemPage from "views/ProfilDesa/SistemPage";
+// Profile Desa
+import SejarahPage from "views/ProfilDesa/SejarahPage";
+import StrukturPage from "views/ProfilDesa/StrukturPage";
+import LembagaPage from "views/ProfilDesa/LembagaPage";
+import GeografiPage from "views/ProfilDesa/GeografiPage";
+import DemografisPage from "views/ProfilDesa/DemografisPage";
+import EkonomiPage from "views/ProfilDesa/EkonomiPage";
+// Anggaran Desa
+import ApbdPage from "views/Anggaran/Apbd";
+// Inventaris Desa
+import TanahPage from "views/Inventaris/InventarisTanah";
+import BangunanPage from "views/Inventaris/InventarisBangunan";
+import JalanPage from "views/Inventaris/InventarisJalan";
+import KendaraanPage from "views/Inventaris/InventarisKendaraan";
+import PeralatanPage from "views/Inventaris/InventarisPeralatan";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -39,8 +53,23 @@ root.render(
       <Route path="/desapandean" element={<LandingPage />} />
       <Route path="/index" element={<Index />} />
       <Route path="/nucleo-icons" element={<NucleoIcons />} />
+      {/* Profil desa */}
       <Route path="/Sejarah-page" element={<SejarahPage />} />
-      <Route path="/Sistem-page" element={<SistemPage />} />
+      <Route path="/Struktur-page" element={<StrukturPage />} />
+      <Route path="/Lembaga-page" element={<LembagaPage />} />
+      <Route path="/Geografis-page" element={<GeografiPage />} />
+      <Route path="/Demografis-page" element={<DemografisPage />} />
+      <Route path="/Ekonomi-page" element={<EkonomiPage />} />
+      {/* Anggaran desa */}
+      <Route path="/Apbd-page" element={<ApbdPage />} />
+      {/* Inventaris desa */}
+      <Route path="/InventarisTanah-page" element={<TanahPage />} />
+      <Route path="/InventarisBangunan-page" element={<BangunanPage />} />
+      <Route path="/InventarisJalan-page" element={<JalanPage />} />
+      <Route path="/InventarisKendaraan-page" element={<KendaraanPage />} />
+      <Route path="/InventarisPeralatan-page" element={<PeralatanPage />} />
+
+
 
       <Route path="*" element={<Navigate to="/desapandean" replace />} />
     </Routes>
