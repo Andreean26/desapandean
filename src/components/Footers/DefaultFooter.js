@@ -33,7 +33,7 @@ function DefaultFooter() {
             © {new Date().getFullYear()}, KKN-UPNVJT
             . Coded by{" "}
             <a
-              href="https://www.creative-tim.com?ref=nukr-default-footer"
+              href="https://www.instagram.com/andreeanadam/"
               target="_blank"
             >
               andreean

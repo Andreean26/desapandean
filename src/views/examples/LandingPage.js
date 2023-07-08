@@ -19,7 +19,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 // import ModalImage from "react-modal-image";
-import Apbd from "assets/img/APBD2022.png";
+import Apbd23 from "assets/img/APBD2023.jpg";
 import berital1 from "assets/img/berital1.jpeg";
 import berital2 from "assets/img/berital2.jpg";
 import berital3 from "assets/img/berital3.jpg";
@@ -51,12 +51,8 @@ function LandingPage() {
 
         <div className="section section-about-us">
           <Container>
-            <Row style={{ display: "flex", justifyContent: "center" }}>
-              {/* <Col className="ml-auto mr-auto text-center" md="8"> */}
-              <h2 className="title">Selamat datang di website Desa Pandean </h2>
-
-              {/* </Col> */}
-            </Row>
+            <h2 className="title" style={{textAlign:"center"}}>Selamat datang di website Desa Pandean </h2>
+            
             <div className="separator separator-primary"></div>
             <Row>
               <Col>
@@ -76,6 +72,7 @@ function LandingPage() {
                         }}
                       ></div>
                     </Col>
+
                     <Col md="5">
                       <div
                         className="image-container image-right"
@@ -92,20 +89,17 @@ function LandingPage() {
                   </Row>
                 </div>
               </Col>
+
               <Col>
-                <div
-                  className="section-story-overview"
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div
-                    className="image-container image-center"
-                    style={{
-                      backgroundImage:
-                        "url(" + require("assets/img/APBD2023.jpg") + ")",
-                      height: "768px",
-                      width: "516px",
-                    }}
-                  ></div>
+              <div class="card" style={{ borderRadius: "10px" }}>
+                  <div class="card-body">
+                  <img
+                          src={Apbd23}
+                          alt="Apbd"
+                          class="img-fluid"
+                          style={{ width: "100%", height: "100%" }}
+                        ></img>
+                  </div>
                 </div>
               </Col>
             </Row>
@@ -127,227 +121,132 @@ function LandingPage() {
                 >
                   <div class="card-body">
                     <h2 className="title">Berita Terkini</h2>
-                    <table class="table table-borderless">
-                      <tbody>
-                        <tr>
-                          <Card mb-3 style={{ width: "450px" }}>
-                            <div class="row no-gutters">
-                              <div
-                                class="col-md-4"
-                                style={{
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <img
-                                  src={berital1}
-                                  alt="Apbd"
-                                  class="img-fluid"
-                                  style={{ width: "80%", height: "50%" }}
-                                ></img>
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <a
-                                    href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
-                                    style={{ color: "black" }}
-                                  >
-                                    Keseruan Workshop Ecoprint oleh Mahasiswa
-                                    KKN untuk Pelajar SDN 1 Padean di Nganjuk
-                                  </a>
-                                  <p class="card-text">
-                                    <small class="text-muted">
-                                      Last updated 3 mins ago
-                                    </small>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </Card>
-                        </tr>
-                        <tr>
-                          <Card mb-3 style={{ width: "450px" }}>
-                            <div class="row no-gutters">
-                              <div
-                                class="col-md-4"
-                                style={{
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <img
-                                  src={berital2}
-                                  alt="Apbd"
-                                  class="img-fluid"
-                                  style={{ width: "80%", height: "50%" }}
-                                ></img>
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <a
-                                    href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
-                                    style={{ color: "black" }}
-                                  >
-                                    Mahasiswa KKNT Menggelar Bimbingan Belajar
-                                    untuk Para Pelajar SD di Pandean Nganjuk
-                                  </a>
-                                  <p class="card-text">
-                                    <small class="text-muted">
-                                      Last updated 3 mins ago
-                                    </small>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </Card>
-                        </tr>
-                        <tr>
-                          <Card mb-3 style={{ width: "450px" }}>
-                            <div class="row no-gutters">
-                              <div
-                                class="col-md-4"
-                                style={{
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <img
-                                  src={berital3}
-                                  alt="Apbd"
-                                  class="img-fluid"
-                                  style={{ width: "80%", height: "50%" }}
-                                ></img>
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <a
-                                    href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
-                                    style={{ color: "black" }}
-                                  >
-                                    Begini Sosialisasi Perancangan Desa Wisata
-                                    di Pandean, Nganjuk oleh Mahasiswa KKNT
-                                  </a>
-                                  <p class="card-text">
-                                    <small class="text-muted">25/05/2023</small>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </Card>
-                        </tr>
-                        <tr>
-                          <Card mb-3 style={{ width: "450px" }}>
-                            <div class="row no-gutters">
-                              <div
-                                class="col-md-4"
-                                style={{
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <img
-                                  src={berital4}
-                                  alt="Apbd"
-                                  class="img-fluid"
-                                  style={{ width: "80%", height: "50%" }}
-                                ></img>
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <a
-                                    href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
-                                    style={{ color: "black" }}
-                                  >
-                                    KKN Mahasiswa UPN Surabaya di Desa Pandean
-                                    Ngajuk, Membuat Program Khusus Petani Bawang
-                                    Merah
-                                  </a>
-                                  <p class="card-text">
-                                    <small class="text-muted">22/03/2023</small>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </Card>
-                        </tr>
-                        <tr>
-                          <Card mb-3 style={{ width: "450px" }}>
-                            <div class="row no-gutters">
-                              <div
-                                class="col-md-4"
-                                style={{
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <img
-                                  src={berital5}
-                                  alt="Apbd"
-                                  class="img-fluid"
-                                  style={{ width: "80%", height: "50%" }}
-                                ></img>
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <a
-                                    href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
-                                    style={{ color: "black" }}
-                                  >
-                                    Metode Penyiraman Sprinkler Irrigation
-                                    Menekan Biaya Produksi Petani Bawang Merah
-                                    Nganjuk
-                                  </a>
-                                  <p class="card-text">
-                                    <small class="text-muted">03/04/2023</small>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </Card>
-                        </tr>
-                        <tr>
-                          <Card mb-3 style={{ width: "450px" }}>
-                            <div class="row no-gutters">
-                              <div
-                                class="col-md-4"
-                                style={{
-                                  display: "flex",
-                                  justifyContent: "center",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <img
-                                  src={berital6}
-                                  alt="Apbd"
-                                  class="img-fluid"
-                                  style={{ width: "80%", height: "50%" }}
-                                ></img>
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <a
-                                    href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
-                                    style={{ color: "black" }}
-                                  >
-                                    Kelompok Mahasiswa KKNT di Gondang Nganjuk,
-                                    Gelar Sosisalisasi Literasi Digital untuk
-                                    Remaja
-                                  </a>
-                                  <p class="card-text">
-                                    <small class="text-muted">02/05/2023</small>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </Card>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <ul class="list-unstyled">
+                      <li class="media">
+                        <img
+                          src={berital1}
+                          alt="Apbd"
+                          class="img-fluid"
+                          style={{ width: "50%", height: "20%" }}
+                        ></img>
+                        <div class="media-body">
+                          <a
+                            href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
+                            style={{ color: "black" }}
+                          >
+                            Keseruan Workshop Ecoprint oleh Mahasiswa KKN untuk
+                            Pelajar SDN 1 Padean di Nganjuk
+                          </a>
+                          <p class="card-text">
+                            <small class="text-muted">
+                              Last updated 3 mins ago
+                            </small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media my-4">
+                        <img
+                          src={berital2}
+                          alt="Apbd"
+                          class="img-fluid"
+                          style={{ width: "50%", height: "20%" }}
+                        ></img>
+                        <div class="media-body">
+                          <a
+                            href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
+                            style={{ color: "black" }}
+                          >
+                            Mahasiswa KKNT Menggelar Bimbingan Belajar untuk
+                            Para Pelajar SD di Pandean Nganjuk
+                          </a>
+                          <p class="card-text">
+                            <small class="text-muted">
+                              Last updated 3 mins ago
+                            </small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media">
+                        <img
+                          src={berital3}
+                          alt="Apbd"
+                          class="img-fluid"
+                          style={{ width: "50%", height: "20%" }}
+                        ></img>
+                        <div class="media-body">
+                          <a
+                            href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
+                            style={{ color: "black" }}
+                          >
+                            Begini Sosialisasi Perancangan Desa Wisata di
+                            Pandean, Nganjuk oleh Mahasiswa KKNT
+                          </a>
+                          <p class="card-text">
+                            <small class="text-muted">25/05/2023</small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media my-4">
+                        <img
+                          src={berital4}
+                          alt="Apbd"
+                          class="img-fluid"
+                          style={{ width: "50%", height: "20%" }}
+                        ></img>
+                        <div class="media-body">
+                          <a
+                            href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
+                            style={{ color: "black" }}
+                          >
+                            KKN Mahasiswa UPN Surabaya di Desa Pandean Ngajuk,
+                            Membuat Program Khusus Petani Bawang Merah
+                          </a>
+                          <p class="card-text">
+                            <small class="text-muted">22/03/2023</small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media">
+                        <img
+                          src={berital5}
+                          alt="Apbd"
+                          class="img-fluid"
+                          style={{ width: "50%", height: "20%" }}
+                        ></img>
+                        <div class="media-body">
+                          <a
+                            href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
+                            style={{ color: "black" }}
+                          >
+                            Metode Penyiraman Sprinkler Irrigation Menekan Biaya
+                            Produksi Petani Bawang Merah Nganjuk
+                          </a>
+                          <p class="card-text">
+                            <small class="text-muted">03/04/2023</small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media my-4">
+                        <img
+                          src={berital6}
+                          alt="Apbd"
+                          class="img-fluid"
+                          style={{ width: "50%", height: "20%" }}
+                        ></img>
+                        <div class="media-body">
+                          <a
+                            href="https://poskotajatim.co.id/2023/06/25/keseruan-workshop-ecoprint-oleh-mahasiswa-kkn-untuk-pelajar-sdn-1-padean-di-nganjuk/"
+                            style={{ color: "black" }}
+                          >
+                            Kelompok Mahasiswa KKNT di Gondang Nganjuk, Gelar
+                            Sosisalisasi Literasi Digital untuk Remaja
+                          </a>
+                          <p class="card-text">
+                            <small class="text-muted">02/05/2023</small>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </Col>
@@ -388,43 +287,6 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-
-        {/* <div className="section section-team text-left">
-            <Container>
-              <div class="card" style={{borderRadius:"10px"}}>
-                <div class="card-body">
-                  <h2 className="title">NO Telepon Penting</h2>
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Num</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">No Telpon</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Pak Muhib</td>
-                        <td>0853-3503-9468</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Mas Arif</td>
-                        <td>0852-3142-9420</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Bu Nuroin</td>
-                        <td>0857-3656-1311</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </Container>
-          </div> */}
-
         <DefaultFooter />
       </div>
     </>

@@ -50,7 +50,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/desapandean" element={<LandingPage />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/index" element={<Index />} />
       <Route path="/nucleo-icons" element={<NucleoIcons />} />
       {/* Profil desa */}
@@ -71,7 +71,7 @@ root.render(
 
 
 
-      <Route path="*" element={<Navigate to="/desapandean" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
 );
