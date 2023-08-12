@@ -93,7 +93,7 @@ function EkonomiPage() {
                     style={{
                       backgroundImage:
                         "url(" + require("assets/img/ekonomi1.png") + ")"
-                    , height:'301px', width:'874px',  bottom:'300px', right:'50px' }}
+                    , height:'301  px', width:'874px',  bottom:'300px', right:'50px' }}
                   >
                     
                   </div>
